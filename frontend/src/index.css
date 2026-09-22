@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+  font-family: 'Plus Jakarta Sans', Inter, system-ui, -apple-system, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  color: #f8fafc;
+  background: #090b10;
+}
+
+body.light {
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.app.dark {
+  --bg-main: #090b10;
+  --bg-mesh-1: rgba(99, 102, 241, 0.09);
+  --bg-mesh-2: rgba(236, 72, 153, 0.06);
+  --surface-card: rgba(17, 22, 33, 0.88);
+  --surface-card-hover: rgba(21, 28, 42, 0.95);
+  --surface-input: #151b27;
+  --surface-input-focus: #182030;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(255, 255, 255, 0.16);
+  --border-focus: #6366f1;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+  --accent-hover: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #c026d3 100%);
+  --accent-glow: rgba(99, 102, 241, 0.4);
+  --card-shadow: 0 28px 65px -15px rgba(0, 0, 0, 0.8), 0 0 35px rgba(99, 102, 241, 0.08);
+  --card-shadow-hover: 0 36px 80px -15px rgba(0, 0, 0, 0.9), 0 0 45px rgba(99, 102, 241, 0.16);
+  --sidebar-shadow: 0 16px 35px -10px rgba(0, 0, 0, 0.5);
+  --badge-bg: rgba(255, 255, 255, 0.05);
+  --eth-color: #60a5fa;
+  --ak-color: #f472b6;
+}
+
+.app.light {
+  --bg-main: #f8fafc;
+  --bg-mesh-1: rgba(99, 102, 241, 0.08);
+  --bg-mesh-2: rgba(236, 72, 153, 0.06);
+  --surface-card: rgba(255, 255, 255, 0.96);
+  --surface-card-hover: #ffffff;
+  --surface-input: #f1f5f9;
+  --surface-input-focus: #e2e8f0;
+  --border-subtle: rgba(226, 232, 240, 0.95);
+  --border-highlight: rgba(203, 213, 225, 0.85);
+  --border-focus: #6366f1;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #d946ef 100%);
+  --accent-hover: linear-gradient(135deg, #4338ca 0%, #6d28d9 50%, #c026d3 100%);
+  --accent-glow: rgba(79, 70, 229, 0.25);
+  --card-shadow: 0 12px 35px -8px rgba(15, 23, 42, 0.08), 0 0 25px rgba(99, 102, 241, 0.05);
+  --card-shadow-hover: 0 20px 45px -8px rgba(15, 23, 42, 0.12), 0 0 35px rgba(99, 102, 241, 0.08);
+  --sidebar-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.06);
+  --badge-bg: rgba(99, 102, 241, 0.08);
+  --eth-color: #2563eb;
+  --ak-color: #db2777;
+}
+
+html, body, #root {
+  min-height: 100vh;
+}

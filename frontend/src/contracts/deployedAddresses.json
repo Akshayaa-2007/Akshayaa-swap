@@ -1,0 +1,23 @@
+{
+  "network": "localhost",
+  "tokenAddress": "0xdc64a140aa3e981100a9beca4e685f962f0cf6c9",
+  "swapAddress": "0x5fc8d32690cc91d4c39d9d3abcbd16989f875707",
+  "tokenSymbol": "AK",
+  "tokenName": "akshayaa",
+  "maxSupply": "100",
+  "initialSupply": "50",
+  "networks": {
+    "31337": {
+      "name": "Hardhat Localhost",
+      "chainId": 31337,
+      "tokenAddress": "0xdc64a140aa3e981100a9beca4e685f962f0cf6c9",
+      "swapAddress": "0x5fc8d32690cc91d4c39d9d3abcbd16989f875707"
+    },
+    "11155111": {
+      "name": "Ethereum Sepolia",
+      "chainId": 11155111,
+      "tokenAddress": "",
+      "swapAddress": ""
+    }
+  }
+}
