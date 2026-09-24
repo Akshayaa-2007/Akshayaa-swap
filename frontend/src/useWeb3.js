@@ -4,7 +4,6 @@ import {
   createWalletClient, 
   custom, 
   http, 
-  fallback,
   parseEther, 
   formatEther,
   isAddress 
@@ -31,13 +30,7 @@ export const SUPPORTED_CHAINS = {
     name: 'Ethereum Sepolia',
     shortName: 'Sepolia',
     chain: sepolia,
-    rpcUrls: [
-      'https://ethereum-sepolia-rpc.publicnode.com',
-      'https://1rpc.io/sepolia',
-      'https://sepolia.drpc.org',
-      'https://gateway.tenderly.co/public/sepolia',
-      'https://rpc.ankr.com/eth_sepolia',
-    ],
+    rpcUrls: [import.meta.env.VITE_RENDER_RPC_URL || 'https://onrender.com'],
     explorerUrl: 'https://sepolia.etherscan.io',
     currency: { name: 'Sepolia Ether', symbol: 'ETH', decimals: 18 },
   },
@@ -173,15 +166,8 @@ export function useWeb3() {
     setIsContractValid(false);
   }, []);
 
-  // Public client for the active chain with fallback transport
+  // Use the Render endpoint as the single HTTP JSON-RPC transport.
   const publicClient = useMemo(() => {
-    if (activeChainConfig.id === 11155111) {
-      const transports = activeChainConfig.rpcUrls.map(url => http(url, { retryCount: 2, retryDelay: 500 }));
-      return createPublicClient({
-        chain: activeChain,
-        transport: fallback(transports),
-      });
-    }
     return createPublicClient({
       chain: activeChain,
       transport: http(activeChainConfig.rpcUrls[0]),
